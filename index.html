@@ -31,10 +31,14 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a id="welcome-to-daily-prayer-time-wordpress-widget" class="anchor" href="#welcome-to-daily-prayer-time-wordpress-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to Daily Prayer Time wordpress widget.</h3>
+        <h1>
+<a id="daily-prayer-time" class="anchor" href="#daily-prayer-time" aria-hidden="true"><span class="octicon octicon-link"></span></a>daily-prayer-time</h1>
 
-<p>This widget requires you to have your own database table. The table specification must follow:</p>
+<p>Wordpress widget to display daily prayer time</p>
+
+<p>This widget requires a database table named 'timetable' in your own wordpress database. </p>
+
+<p>The table definition must follow:</p>
 
 <div class="highlight highlight-sql"><pre><span class="pl-k">CREATE</span> <span class="pl-k">TABLE</span> `<span class="pl-en">timetable</span>` (
   <span class="pl-s"><span class="pl-pds">`</span>timetable_id<span class="pl-pds">`</span></span> <span class="pl-k">int</span>(<span class="pl-c1">3</span>) <span class="pl-k">NOT NULL</span> AUTO_INCREMENT,
@@ -54,6 +58,19 @@
   <span class="pl-s"><span class="pl-pds">`</span>isha_jamah<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
   <span class="pl-k">PRIMARY KEY</span> (<span class="pl-s"><span class="pl-pds">`</span>timetable_id<span class="pl-pds">`</span></span>)
 ) ENGINE<span class="pl-k">=</span>InnoDB AUTO_INCREMENT<span class="pl-k">=</span><span class="pl-c1">367</span> DEFAULT CHARSET<span class="pl-k">=</span>utf8;<span class="pl-s"><span class="pl-pds">`</span></span></pre></div>
+
+<h5>
+<a id="the-widget-will-be-usuable-once-you-import-your-masjids-prayer-timetable-daata-into-the-table" class="anchor" href="#the-widget-will-be-usuable-once-you-import-your-masjids-prayer-timetable-daata-into-the-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>The widget will be usuable once you import your Masjid's prayer timetable daata into the table.</h5>
+
+<p>You can use either sql import or csv import to feed data into your table. Please check the directory names 'sample' for the format of file to be imported.</p>
+
+<p>Once the above is done, The widget will allow you</p>
+
+<ul>
+<li><p>To display prayer time either vertically or horizontally.</p></li>
+<li><p>to display 'Jamah time' only.</p></li>
+<li><p>You can aslo show Hanafi Asr start time.</p></li>
+</ul>
       </section>
     </div>
 
