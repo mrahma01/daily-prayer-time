@@ -11,7 +11,6 @@ class DatabaseConnection
 
     }
 
-
     public function returnArray($sql)
     {
         $result = $this->conn->query($sql);

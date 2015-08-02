@@ -24,12 +24,8 @@ class DailyPrayerTime extends WP_Widget
 
     public function form($instance)
     {
-        $choice = "";
-        if( !empty( $instance['choice'] ) ) {
-            $choice = $instance['choice'];
-        }
-
         ?>
+
         <div>
             <span>
             </br></br>
@@ -39,6 +35,12 @@ class DailyPrayerTime extends WP_Widget
                     value="jamahOnly"
                     <?php if($instance["jamahOnly"] === 'jamahOnly'){ echo 'checked="checked"'; } ?>
                 />Display Jamah time only</br></br>
+                <input
+                    type="checkbox"
+                    name="<?php echo $this->get_field_name( 'hanafiAsr' ); ?>"
+                    value="hanafiAsr"
+                    <?php if($instance["hanafiAsr"] === 'hanafiAsr'){ echo 'checked="checked"'; } ?>
+                />Display Hanafi Asr time</br></br>
                 <input
                     type="radio"
                     name="<?php echo $this->get_field_name( 'choice' ); ?>"
@@ -72,6 +74,10 @@ class DailyPrayerTime extends WP_Widget
 
         if (! empty($instance['jamahOnly'])) {
             $this->timeTable->setJamahOnly();
+        }
+
+        if (! empty($instance['hanafiAsr'])) {
+            $this->timeTable->setHanafiAsr();
         }
 
         if ($instance['choice'] === 'vertical') {
