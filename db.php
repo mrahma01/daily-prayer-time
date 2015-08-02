@@ -11,6 +11,10 @@ class DatabaseConnection
 
     }
 
+    /**
+     * @param  string $sql
+     * @return boolean
+     */
     public function returnArray($sql)
     {
         $result = $this->conn->query($sql);
