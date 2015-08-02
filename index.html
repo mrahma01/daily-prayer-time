@@ -34,45 +34,26 @@
         <h3>
 <a id="welcome-to-daily-prayer-time-wordpress-widget" class="anchor" href="#welcome-to-daily-prayer-time-wordpress-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to Daily Prayer Time wordpress widget.</h3>
 
-<p>This widget requires you to have your own database table. The table specification must follow:
-    CREATE TABLE <code>timetable</code> (
-  <code>timetable_id</code> int(3) NOT NULL AUTO_INCREMENT,
-  <code>timetable_modified</code> timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  <code>d_date</code> date DEFAULT NULL,
-  <code>fajr_begins</code> time DEFAULT NULL,
-  <code>fajr_jamah</code> time DEFAULT NULL,
-  <code>sunrise</code> time DEFAULT NULL,
-  <code>zuhr_begins</code> time DEFAULT NULL,
-  <code>zuhr_jamah</code> time DEFAULT NULL,
-  <code>asr_mithl_1</code> time DEFAULT NULL,
-  <code>asr_mithl_2</code> time DEFAULT NULL,
-  <code>asr_jamah</code> time DEFAULT NULL,
-  <code>maghrib_begins</code> time DEFAULT NULL,
-  <code>maghrib_jamah</code> time DEFAULT NULL,
-  <code>isha_begins</code> time DEFAULT NULL,
-  <code>isha_jamah</code> time DEFAULT NULL,
-  PRIMARY KEY (<code>timetable_id</code>)
-) ENGINE=InnoDB AUTO_INCREMENT=367 DEFAULT CHARSET=utf8;</p>
+<p>This widget requires you to have your own database table. The table specification must follow:</p>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<div class="highlight highlight-sql"><pre><span class="pl-k">CREATE</span> <span class="pl-k">TABLE</span> `<span class="pl-en">timetable</span>` (
+  <span class="pl-s"><span class="pl-pds">`</span>timetable_id<span class="pl-pds">`</span></span> <span class="pl-k">int</span>(<span class="pl-c1">3</span>) <span class="pl-k">NOT NULL</span> AUTO_INCREMENT,
+  <span class="pl-s"><span class="pl-pds">`</span>timetable_modified<span class="pl-pds">`</span></span> <span class="pl-k">timestamp</span> <span class="pl-k">NOT NULL</span> DEFAULT <span class="pl-c1">CURRENT_TIMESTAMP</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>d_date<span class="pl-pds">`</span></span> <span class="pl-k">date</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>fajr_begins<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>fajr_jamah<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>sunrise<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>zuhr_begins<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>zuhr_jamah<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>asr_mithl_1<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>asr_mithl_2<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>asr_jamah<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>maghrib_begins<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>maghrib_jamah<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>isha_begins<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-s"><span class="pl-pds">`</span>isha_jamah<span class="pl-pds">`</span></span> <span class="pl-k">time</span> DEFAULT <span class="pl-k">NULL</span>,
+  <span class="pl-k">PRIMARY KEY</span> (<span class="pl-s"><span class="pl-pds">`</span>timetable_id<span class="pl-pds">`</span></span>)
+) ENGINE<span class="pl-k">=</span>InnoDB AUTO_INCREMENT<span class="pl-k">=</span><span class="pl-c1">367</span> DEFAULT CHARSET<span class="pl-k">=</span>utf8;<span class="pl-s"><span class="pl-pds">`</span></span></pre></div>
       </section>
     </div>
 
