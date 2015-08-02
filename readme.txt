@@ -1,5 +1,29 @@
-# daily-prayer-time
-Wordpress widget to display daily prayer time
+=== Daily Prayer Time ===
+Contributors: mmrs151	
+Donate link: http://edgwareict.org.uk/
+Tags: prayer time, salah time
+Requires at least: 3.0.1
+Tested up to: 3.4
+Stable tag: 4.3
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Display daily prayer time either vertically or horizontally
+
+== Description ==
+The widget will allow you
+
+- To display prayer time either vertically or horizontally.
+
+- To display 'Jamah time' only.
+
+- You can aslo show Hanafi Asr start time.
+
+== Installation ==
+1. Download the plugin
+2. Simply go under the Plugins page, then click on Add new and select the plugin's .zip file
+3. Alternatively you can extract the contents of the zip file directly to your wp-content/plugins/ folder
+4. Finally, just go under Plugins and activate the plugin
 
 This widget requires a database table named 'timetable' in your own wordpress database. 
 
@@ -36,3 +60,7 @@ Once the above is done, The widget will allow you
 - to display 'Jamah time' only.
 
 - You can aslo show Hanafi Asr start time.
+
+== Screenshots ==
+1. `/assets/screenshot-1.png` Horizontal timing
+2. `/assets/screenshot-2.png` Vertical timing
