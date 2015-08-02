@@ -29,3 +29,10 @@ CREATE TABLE `timetable` (
 
 You can use either sql import or csv import to feed data into your table. Please check the directory names 'sample' for the format of file to be imported.
 
+Once the above is done, The widget will allow you
+
+- To display prayer time either vertically or horizontally.
+
+- to display 'Jamah time' only.
+
+- You can aslo show Hanafi Asr start time.
