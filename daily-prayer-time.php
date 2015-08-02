@@ -40,7 +40,7 @@ class DailyPrayerTime extends WP_Widget
                     name="<?php echo $this->get_field_name( 'hanafiAsr' ); ?>"
                     value="hanafiAsr"
                     <?php if($instance["hanafiAsr"] === 'hanafiAsr'){ echo 'checked="checked"'; } ?>
-                />Display Hanafi Asr time</br></br>
+                />Display Asr start time according to Hanafi school</br></br>
                 <input
                     type="radio"
                     name="<?php echo $this->get_field_name( 'choice' ); ?>"
