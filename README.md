@@ -1,10 +1,11 @@
 # daily-prayer-time
 Wordpress widget to display daily prayer time
 
-This widget requires a database table called 'timetable' in your wordpress database. 
+This widget requires a database table named 'timetable' in your own wordpress database. 
+
 The table definition must follow:
 ```sql
-   CREATE TABLE `timetable` (
+CREATE TABLE `timetable` (
   `timetable_id` int(3) NOT NULL AUTO_INCREMENT,
   `timetable_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `d_date` date DEFAULT NULL,
@@ -23,3 +24,4 @@ The table definition must follow:
   PRIMARY KEY (`timetable_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=367 DEFAULT CHARSET=utf8;`
 ```
+The widget will be usuable once you import your Masjid's prayer timetable daata into the table.
