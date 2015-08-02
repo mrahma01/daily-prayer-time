@@ -24,4 +24,8 @@ CREATE TABLE `timetable` (
   PRIMARY KEY (`timetable_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=367 DEFAULT CHARSET=utf8;`
 ```
-The widget will be usuable once you import your Masjid's prayer timetable daata into the table.
+
+#####The widget will be usuable once you import your Masjid's prayer timetable daata into the table.
+
+You can use either sql import or csv import to feed data into your table. Please check the directory names 'sample' for the format of file to be imported.
+
