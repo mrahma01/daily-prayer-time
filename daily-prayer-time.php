@@ -24,29 +24,33 @@ class DailyPrayerTime extends WP_Widget
 
     public function form($instance)
     {
-
-        echo "</br>Current selection: <b>" . $instance["choice"] . "</b>";
         $choice = "";
         if( !empty( $instance['choice'] ) ) {
             $choice = $instance['choice'];
-   }
+        }
 
         ?>
         <div>
             <span>
             </br></br>
                 <input
+                    type="checkbox"
+                    name="<?php echo $this->get_field_name( 'jamahOnly' ); ?>"
+                    value="jamahOnly"
+                    <?php if($instance["jamahOnly"] === 'jamahOnly'){ echo 'checked="checked"'; } ?>
+                />Display Jamah time only</br></br>
+                <input
                     type="radio"
                     name="<?php echo $this->get_field_name( 'choice' ); ?>"
                     value="vertical"
                     <?php if($instance["choice"] === 'vertical'){ echo 'checked="checked"'; } ?>
-                />Vertically</br></br>
+                />Display prayer time vertically</br></br>
                 <input
                     type="radio"
                     name="<?php echo $this->get_field_name( 'choice' ); ?>"
                     value="horizontal"
                     <?php if($instance["choice"] === 'horizontal'){ echo 'checked="checked"'; } ?>
-                />Horizontally</br></br>
+                />Display prayer time horizontally</br></br>
             </span>
         </div>
 
@@ -55,7 +59,7 @@ class DailyPrayerTime extends WP_Widget
 
         <?php
 
-        // echo $args['after_widget'];
+        echo $args['after_widget'];
     }
 
     public function update( $new_instance, $old_instance ) {
@@ -64,6 +68,12 @@ class DailyPrayerTime extends WP_Widget
 
     public function widget($args, $instance)
     {
+        echo $before_widget;
+
+        if (! empty($instance['jamahOnly'])) {
+            $this->timeTable->setJamahOnly();
+        }
+
         if ($instance['choice'] === 'vertical') {
             echo $this->timeTable->verticalTime();
         } else {
