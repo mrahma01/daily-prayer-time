@@ -3,7 +3,8 @@ Wordpress widget to display daily prayer time
 
 This widget requires a database table called 'timetable' in your wordpress database. 
 The table definition must follow:
-`CREATE TABLE `timetable` (
+```sql
+   CREATE TABLE `timetable` (
   `timetable_id` int(3) NOT NULL AUTO_INCREMENT,
   `timetable_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `d_date` date DEFAULT NULL,
@@ -21,3 +22,4 @@ The table definition must follow:
   `isha_jamah` time DEFAULT NULL,
   PRIMARY KEY (`timetable_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=367 DEFAULT CHARSET=utf8;`
+```
